@@ -13,6 +13,11 @@ bot = telebot.TeleBot('')
 test = False
 test = True
 
+challenge_mass = []
+challenge_owner = []
+challenge_is_active = [False]
+
+
 string_for_izum = "пиздобратия мандопроушечная, уебище залупоглазое, дрочепиздище хуеголовое, пробиздоблядская мандопроушина,\
                гнидопаскудная хуемандовина, блядь семитаборная, чтоб тебя всем столыпином харили, охуевшее блядепиздопроёбище,\
                чтоб ты хуем поперхнулся, долбоебическая пиздорвань, хуй тебе в глотку через анальный проход,\
@@ -53,13 +58,64 @@ def avesranb_message(message):
 
 @bot.message_handler(commands=['test'])
 def test_message(message):
+    bot.send_message(message.chat.id, datetime.datetime.now())
 
-    markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(telebot.types.InlineKeyboardButton("Участвую!", callback_data = 'add_me'))
-    markup.add(telebot.types.InlineKeyboardButton("Выбрать победителя.", callback_data = 'roll'))
+@bot.message_handler(commands=['raffle'])
+def test_message(message):
+    
+    if message.text == '/raffle':
+       bot.send_message(message.chat.id, "Конкурс без текста... Так нельзя, брат, нельзя =(", reply_to_message_id=message.id)
+    else:
+        if challenge_is_active[0]:
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text="Имейте совесть, не больше конкурса за раз.")
+            return
+        
+        challenge_owner.insert(0,"@"+ message.from_user.username)
+        markup = telebot.types.InlineKeyboardMarkup()
+        markup.add(telebot.types.InlineKeyboardButton("Участвую!", callback_data = 'add_me'))
+        markup.add(telebot.types.InlineKeyboardButton("Выбрать победителя.", callback_data = 'roll'))
+        challenge_is_active.clear()
+        challenge_is_active.insert(0,True)
+        bot.send_message(message.chat.id, "\U0001F4A5 Внимание... ДЛАНЕКОНКУРС от @"+ message.from_user.username + "\n" + \
+                         "\n" + \
+                         "Уважаемые участники: \n", \
+                          reply_to_message_id=message.id, parse_mode='html', reply_markup=markup)
+    
+
+@bot.callback_query_handler(func=lambda call: True)
+def challenge_func(call):
+    if call.data == 'add_me':
+        if '@' + call.from_user.username in challenge_mass:
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text="Ты куда лезешь второй раз, каззёл!?")
+            return
+            
+        markup = telebot.types.InlineKeyboardMarkup()
+        markup.add(telebot.types.InlineKeyboardButton("Участвую!", callback_data = 'add_me'))
+        markup.add(telebot.types.InlineKeyboardButton("Выбрать победителя.", callback_data = 'roll')) 
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, \
+                              text = call.message.text+'\n \U0001F90E @'+ call.from_user.username,reply_markup=markup)
+         
+        challenge_mass.insert(0,"@"+ call.from_user.username)
    
-    bot.send_message(message.chat.id, "Внимание... ДЛАНЕКОНКУРС от @"+ message.from_user.username )
-    bot.send_message(message.chat.id, message.text, parse_mode='html', reply_markup=markup)
+    elif call.data == 'roll':
+         if '@'+ call.from_user.username != challenge_owner[0]:
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False, text="Не твой конкурс, родной. Или ты криворукий просто?")
+            return  
+         
+         winner = challenge_winner(challenge_mass)
+       #  bot.send_message(call.message.chat.id,'Подебил ' + winner, reply_to_message_id=call.message.id)
+         bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text = call.message.text+'\n\n\n Победил легендарный \U0001F496 '+winner + "\U0001F496")
+         challenge_is_active.clear()
+         challenge_is_active.insert(0,False)
+         challenge_owner.clear()
+         challenge_mass.clear()
+         
+
+
+def challenge_winner(challenge_mass):
+    if len(challenge_mass) > 0:
+         return challenge_mass[random.randint(0,len(challenge_mass)-1)]
+
 
 @bot.message_handler(content_types='text')
 def get_text_messages(message):
@@ -67,7 +123,7 @@ def get_text_messages(message):
     if "пидорните" in str.lower(message.text):
         bot.send_message(message.chat.id, "Ну пидорните");
     elif "член" in str.lower(message.text):
-        bot.send_message(message.chat.id, "Я по глазам вижу, что твой пчленб длиной " +str(random.randint(1, 125))+ " см., @" +message.from_user.username);
+        bot.send_message(message.chat.id, "Я по глазам вижу, что твой пчленб длиной " +str(random.randint(1, 125))+ " см. \U0001F90F, @" +message.from_user.username);
     elif ("попобав" in str.lower(message.text)) and answer():
         bot.send_message(message.chat.id, "Попобава лох и казёл, это все знают, @" +message.from_user.username);
     elif message.from_user.username == "xxxizymxxx":
@@ -176,6 +232,3 @@ def send_reminder(chat_id, reminder_name):
 
 
 bot.polling(none_stop=True, interval=0); 
-
-
-
