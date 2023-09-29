@@ -1,4 +1,4 @@
-
+п»ї
 import html
 import telebot
 import datetime
@@ -13,19 +13,19 @@ bot = telebot.TeleBot('')
 test = False
 test = True
 
-string_for_izum = "пиздобратия мандопроушечная, уебище залупоглазое, дрочепиздище хуеголовое, пробиздоблядская мандопроушина,\
-               гнидопаскудная хуемандовина, блядь семитаборная, чтоб тебя всем столыпином харили, охуевшее блядепиздопроёбище,\
-               чтоб ты хуем поперхнулся, долбоебическая пиздорвань, хуй тебе в глотку через анальный проход,\
-               распизди тебя тройным перебором через вторичный переёб, пиздоблятское хуепиздрическое мудовафлоебище,\
-               мудовафлоебище сосущее километры трипперных членов, трихломидозопиздоеблохуеблядеперепиздическая спермоблевотина, гондон с гонореей,\
-               блядская пиздапроебина охуевающая в своей пидарастической сущности,Хуелептический пиздопрозоид, еблоухий мандохвост,\
-               сосун хуеголовый, пидрасня ебаная,Залупоголовая блядоящерица,Трипиздоблядская промудохуина,\
-               Распроеб твою в крестище через коромысло в копейку мать,Членососущий вафломеханизм,лунь пизду склевавший,Мордоблядина залупоглазая,\
-               Склипездень двужопостворчатый,Пидор,Хуйло,Хохол,Чурка,Уебень,Говноед,сука, пидор, блядь, мудло, уебище, ебосос, хуисоска, педрилка,\
-               вафел, еблан, пидарас, уебок, хуила, мудила, блядина, уебанок, трахарила, ебарила, гавносос, миньетчик, пидэраст, пиздоеб, дрочер,\
-               жопа, сцукаблянах, пиздарас, хуеплет, пиздолиз, хуй, мудак, хуяк, ебак, сцука, уебина, чмо, вафлеглот, гавноеб, захуятор, пидар,\
-               хуиман, хуеб, ёблядь, хуёблядь, еб, ебалдуй, пиздун, хуесос, ебил, выблядок, гавноед, гавнажуй, долбаеб, выебок, мудоеб, обмудок,\
-               овцееб, свиноеб, ебозер, ахуятэр, хуетрон, хуеглот, мудень, залупа, злоуебок, гандон, хуесрань, пиздец, пиздюк, хуйло и параша"
+string_for_izum = "РїРёР·РґРѕР±СЂР°С‚РёСЏ РјР°РЅРґРѕРїСЂРѕСѓС€РµС‡РЅР°СЏ, СѓРµР±РёС‰Рµ Р·Р°Р»СѓРїРѕРіР»Р°Р·РѕРµ, РґСЂРѕС‡РµРїРёР·РґРёС‰Рµ С…СѓРµРіРѕР»РѕРІРѕРµ, РїСЂРѕР±РёР·РґРѕР±Р»СЏРґСЃРєР°СЏ РјР°РЅРґРѕРїСЂРѕСѓС€РёРЅР°,\
+               РіРЅРёРґРѕРїР°СЃРєСѓРґРЅР°СЏ С…СѓРµРјР°РЅРґРѕРІРёРЅР°, Р±Р»СЏРґСЊ СЃРµРјРёС‚Р°Р±РѕСЂРЅР°СЏ, С‡С‚РѕР± С‚РµР±СЏ РІСЃРµРј СЃС‚РѕР»С‹РїРёРЅРѕРј С…Р°СЂРёР»Рё, РѕС…СѓРµРІС€РµРµ Р±Р»СЏРґРµРїРёР·РґРѕРїСЂРѕС‘Р±РёС‰Рµ,\
+               С‡С‚РѕР± С‚С‹ С…СѓРµРј РїРѕРїРµСЂС…РЅСѓР»СЃСЏ, РґРѕР»Р±РѕРµР±РёС‡РµСЃРєР°СЏ РїРёР·РґРѕСЂРІР°РЅСЊ, С…СѓР№ С‚РµР±Рµ РІ РіР»РѕС‚РєСѓ С‡РµСЂРµР· Р°РЅР°Р»СЊРЅС‹Р№ РїСЂРѕС…РѕРґ,\
+               СЂР°СЃРїРёР·РґРё С‚РµР±СЏ С‚СЂРѕР№РЅС‹Рј РїРµСЂРµР±РѕСЂРѕРј С‡РµСЂРµР· РІС‚РѕСЂРёС‡РЅС‹Р№ РїРµСЂРµС‘Р±, РїРёР·РґРѕР±Р»СЏС‚СЃРєРѕРµ С…СѓРµРїРёР·РґСЂРёС‡РµСЃРєРѕРµ РјСѓРґРѕРІР°С„Р»РѕРµР±РёС‰Рµ,\
+               РјСѓРґРѕРІР°С„Р»РѕРµР±РёС‰Рµ СЃРѕСЃСѓС‰РµРµ РєРёР»РѕРјРµС‚СЂС‹ С‚СЂРёРїРїРµСЂРЅС‹С… С‡Р»РµРЅРѕРІ, С‚СЂРёС…Р»РѕРјРёРґРѕР·РѕРїРёР·РґРѕРµР±Р»РѕС…СѓРµР±Р»СЏРґРµРїРµСЂРµРїРёР·РґРёС‡РµСЃРєР°СЏ СЃРїРµСЂРјРѕР±Р»РµРІРѕС‚РёРЅР°, РіРѕРЅРґРѕРЅ СЃ РіРѕРЅРѕСЂРµРµР№,\
+               Р±Р»СЏРґСЃРєР°СЏ РїРёР·РґР°РїСЂРѕРµР±РёРЅР° РѕС…СѓРµРІР°СЋС‰Р°СЏ РІ СЃРІРѕРµР№ РїРёРґР°СЂР°СЃС‚РёС‡РµСЃРєРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё,РҐСѓРµР»РµРїС‚РёС‡РµСЃРєРёР№ РїРёР·РґРѕРїСЂРѕР·РѕРёРґ, РµР±Р»РѕСѓС…РёР№ РјР°РЅРґРѕС…РІРѕСЃС‚,\
+               СЃРѕСЃСѓРЅ С…СѓРµРіРѕР»РѕРІС‹Р№, РїРёРґСЂР°СЃРЅСЏ РµР±Р°РЅР°СЏ,Р—Р°Р»СѓРїРѕРіРѕР»РѕРІР°СЏ Р±Р»СЏРґРѕСЏС‰РµСЂРёС†Р°,РўСЂРёРїРёР·РґРѕР±Р»СЏРґСЃРєР°СЏ РїСЂРѕРјСѓРґРѕС…СѓРёРЅР°,\
+               Р Р°СЃРїСЂРѕРµР± С‚РІРѕСЋ РІ РєСЂРµСЃС‚РёС‰Рµ С‡РµСЂРµР· РєРѕСЂРѕРјС‹СЃР»Рѕ РІ РєРѕРїРµР№РєСѓ РјР°С‚СЊ,Р§Р»РµРЅРѕСЃРѕСЃСѓС‰РёР№ РІР°С„Р»РѕРјРµС…Р°РЅРёР·Рј,Р»СѓРЅСЊ РїРёР·РґСѓ СЃРєР»РµРІР°РІС€РёР№,РњРѕСЂРґРѕР±Р»СЏРґРёРЅР° Р·Р°Р»СѓРїРѕРіР»Р°Р·Р°СЏ,\
+               РЎРєР»РёРїРµР·РґРµРЅСЊ РґРІСѓР¶РѕРїРѕСЃС‚РІРѕСЂС‡Р°С‚С‹Р№,РџРёРґРѕСЂ,РҐСѓР№Р»Рѕ,РҐРѕС…РѕР»,Р§СѓСЂРєР°,РЈРµР±РµРЅСЊ,Р“РѕРІРЅРѕРµРґ,СЃСѓРєР°, РїРёРґРѕСЂ, Р±Р»СЏРґСЊ, РјСѓРґР»Рѕ, СѓРµР±РёС‰Рµ, РµР±РѕСЃРѕСЃ, С…СѓРёСЃРѕСЃРєР°, РїРµРґСЂРёР»РєР°,\
+               РІР°С„РµР», РµР±Р»Р°РЅ, РїРёРґР°СЂР°СЃ, СѓРµР±РѕРє, С…СѓРёР»Р°, РјСѓРґРёР»Р°, Р±Р»СЏРґРёРЅР°, СѓРµР±Р°РЅРѕРє, С‚СЂР°С…Р°СЂРёР»Р°, РµР±Р°СЂРёР»Р°, РіР°РІРЅРѕСЃРѕСЃ, РјРёРЅСЊРµС‚С‡РёРє, РїРёРґСЌСЂР°СЃС‚, РїРёР·РґРѕРµР±, РґСЂРѕС‡РµСЂ,\
+               Р¶РѕРїР°, СЃС†СѓРєР°Р±Р»СЏРЅР°С…, РїРёР·РґР°СЂР°СЃ, С…СѓРµРїР»РµС‚, РїРёР·РґРѕР»РёР·, С…СѓР№, РјСѓРґР°Рє, С…СѓСЏРє, РµР±Р°Рє, СЃС†СѓРєР°, СѓРµР±РёРЅР°, С‡РјРѕ, РІР°С„Р»РµРіР»РѕС‚, РіР°РІРЅРѕРµР±, Р·Р°С…СѓСЏС‚РѕСЂ, РїРёРґР°СЂ,\
+               С…СѓРёРјР°РЅ, С…СѓРµР±, С‘Р±Р»СЏРґСЊ, С…СѓС‘Р±Р»СЏРґСЊ, РµР±, РµР±Р°Р»РґСѓР№, РїРёР·РґСѓРЅ, С…СѓРµСЃРѕСЃ, РµР±РёР», РІС‹Р±Р»СЏРґРѕРє, РіР°РІРЅРѕРµРґ, РіР°РІРЅР°Р¶СѓР№, РґРѕР»Р±Р°РµР±, РІС‹РµР±РѕРє, РјСѓРґРѕРµР±, РѕР±РјСѓРґРѕРє,\
+               РѕРІС†РµРµР±, СЃРІРёРЅРѕРµР±, РµР±РѕР·РµСЂ, Р°С…СѓСЏС‚СЌСЂ, С…СѓРµС‚СЂРѕРЅ, С…СѓРµРіР»РѕС‚, РјСѓРґРµРЅСЊ, Р·Р°Р»СѓРїР°, Р·Р»РѕСѓРµР±РѕРє, РіР°РЅРґРѕРЅ, С…СѓРµСЃСЂР°РЅСЊ, РїРёР·РґРµС†, РїРёР·РґСЋРє, С…СѓР№Р»Рѕ Рё РїР°СЂР°С€Р°"
 
 massiv_izuma = string_for_izum.split(',')
 
@@ -34,13 +34,13 @@ massiv_izuma = string_for_izum.split(',')
 def start_message(message):
     now = datetime.datetime.now()
     if now.time() > datetime.time(19,00,00):
-        bot.send_message(message.chat.id,"Привет, полуёбошные.")
+        bot.send_message(message.chat.id,"РџСЂРёРІРµС‚, РїРѕР»СѓС‘Р±РѕС€РЅС‹Рµ.")
 
-    bot.send_message(message.chat.id,'Производится настройка бота, не лезьте блядб!')
+    bot.send_message(message.chat.id,'РџСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РЅР°СЃС‚СЂРѕР№РєР° Р±РѕС‚Р°, РЅРµ Р»РµР·СЊС‚Рµ Р±Р»СЏРґР±!')
     
-    print("start Потоков до - " + str(threading.active_count()))
+    print("start РџРѕС‚РѕРєРѕРІ РґРѕ - " + str(threading.active_count()))
     start_routine()
-    print("Потоков - " + str(threading.active_count()))
+    print("РџРѕС‚РѕРєРѕРІ - " + str(threading.active_count()))
 
         
 @bot.message_handler(commands=['avesranb'])
@@ -49,29 +49,29 @@ def avesranb_message(message):
 
 @bot.message_handler(commands=['help'])
 def avesranb_message(message):
-    bot.send_message(message.chat.id,'Тебе и врач не поможет. Dinahoi.')
+    bot.send_message(message.chat.id,'РўРµР±Рµ Рё РІСЂР°С‡ РЅРµ РїРѕРјРѕР¶РµС‚. Dinahoi.')
 
 @bot.message_handler(commands=['test'])
 def test_message(message):
 
     markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(telebot.types.InlineKeyboardButton("Участвую!", callback_data = 'add_me'))
-    markup.add(telebot.types.InlineKeyboardButton("Выбрать победителя.", callback_data = 'roll'))
+    markup.add(telebot.types.InlineKeyboardButton("РЈС‡Р°СЃС‚РІСѓСЋ!", callback_data = 'add_me'))
+    markup.add(telebot.types.InlineKeyboardButton("Р’С‹Р±СЂР°С‚СЊ РїРѕР±РµРґРёС‚РµР»СЏ.", callback_data = 'roll'))
    
-    bot.send_message(message.chat.id, "Внимание... ДЛАНЕКОНКУРС от @"+ message.from_user.username )
+    bot.send_message(message.chat.id, "Р’РЅРёРјР°РЅРёРµ... Р”Р›РђРќР•РљРћРќРљРЈР РЎ РѕС‚ @"+ message.from_user.username )
     bot.send_message(message.chat.id, message.text, parse_mode='html', reply_markup=markup)
 
 @bot.message_handler(content_types='text')
 def get_text_messages(message):
     
-    if "пидорните" in str.lower(message.text):
-        bot.send_message(message.chat.id, "Ну пидорните");
-    elif "член" in str.lower(message.text):
-        bot.send_message(message.chat.id, "Я по глазам вижу, что твой пчленб длиной " +str(random.randint(1, 125))+ " см., @" +message.from_user.username);
-    elif ("попобав" in str.lower(message.text)) and answer():
-        bot.send_message(message.chat.id, "Попобава лох и казёл, это все знают, @" +message.from_user.username);
+    if "РїРёРґРѕСЂРЅРёС‚Рµ" in str.lower(message.text):
+        bot.send_message(message.chat.id, "РќСѓ РїРёРґРѕСЂРЅРёС‚Рµ");
+    elif "С‡Р»РµРЅ" in str.lower(message.text):
+        bot.send_message(message.chat.id, "РЇ РїРѕ РіР»Р°Р·Р°Рј РІРёР¶Сѓ, С‡С‚Рѕ С‚РІРѕР№ РїС‡Р»РµРЅР± РґР»РёРЅРѕР№ " +str(random.randint(1, 125))+ " СЃРј., @" +message.from_user.username);
+    elif ("РїРѕРїРѕР±Р°РІ" in str.lower(message.text)) and answer():
+        bot.send_message(message.chat.id, "РџРѕРїРѕР±Р°РІР° Р»РѕС… Рё РєР°Р·С‘Р», СЌС‚Рѕ РІСЃРµ Р·РЅР°СЋС‚, @" +message.from_user.username);
     elif message.from_user.username == "xxxizymxxx":
-        bot.send_message(message.chat.id, "Изюм, " + str.lower(massiv_izuma[random.randint(0, len(massiv_izuma))]).strip() + ", динахой.");
+        bot.send_message(message.chat.id, "РР·СЋРј, " + str.lower(massiv_izuma[random.randint(0, len(massiv_izuma))]).strip() + ", РґРёРЅР°С…РѕР№.");
 
 def answer():
 
@@ -79,7 +79,7 @@ def answer():
 
 def start_routine():
     
-    print("start routine Потоков - " + str(threading.active_count()))
+    print("start routine РџРѕС‚РѕРєРѕРІ - " + str(threading.active_count()))
     
     if threading.active_count() > 6:    
         return
@@ -104,7 +104,7 @@ def start_routine():
             time_massive = [t1.strftime('%Y-%m-%d %H:%M:%S'),t2.strftime('%Y-%m-%d %H:%M:%S')]
         reminder_set_jump(time_massive)
 
-    print("Потоков - " + str(threading.active_count()))
+    print("РџРѕС‚РѕРєРѕРІ - " + str(threading.active_count()))
     
     for thread in threading.enumerate():
         print("Thread name is %s." % thread.name)
@@ -122,17 +122,17 @@ def reminder_set(time_massive):
             delta = reminder_time - now
 
             if delta.total_seconds() > 0:
-                reminder_name = 'Пилить'
+                reminder_name = 'РџРёР»РёС‚СЊ'
                 reminder_timer = threading.Timer(delta.total_seconds(), send_reminder, [chat_id, reminder_name])
                 reminder_timer.start()
                 result_text = result_text + '\n'+str(time_massive[i])
 
         except ValueError:
-            bot.send_message(chat_id, 'При установке времени ярены что-то пошло не так.')
+            bot.send_message(chat_id, 'РџСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ РІСЂРµРјРµРЅРё СЏСЂРµРЅС‹ С‡С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє.')
 
    # if datetime.datetime.now().time() > datetime.time(19,00,00):
     if result_text != '':
-        bot.send_message(chat_id, 'Напоминание СПИЛИТЬ ЛАХА НАХОЙ установлено на:' + result_text)
+        bot.send_message(chat_id, 'РќР°РїРѕРјРёРЅР°РЅРёРµ РЎРџРР›РРўР¬ Р›РђРҐРђ РќРђРҐРћР™ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ РЅР°:' + result_text)
         
 def reminder_set_jump(time_massive):
     result_text = ''
@@ -144,33 +144,33 @@ def reminder_set_jump(time_massive):
             delta = reminder_time - now
 
             if delta.total_seconds() > 0:
-                reminder_name = 'Подзем'
+                reminder_name = 'РџРѕРґР·РµРј'
                 reminder_timer = threading.Timer(delta.total_seconds(), send_reminder, [chat_id, reminder_name])
                 reminder_timer.start()
                 result_text = result_text + '\n'+str(time_massive[i])
 
         except ValueError:
-            bot.send_message(chat_id, 'При установке времени запрыга что-то пошло не так.')
+            bot.send_message(chat_id, 'РџСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ РІСЂРµРјРµРЅРё Р·Р°РїСЂС‹РіР° С‡С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє.')
 
   #  if datetime.datetime.now().time() > datetime.time(19,00,00):
     if result_text != '':
-       bot.send_message(chat_id, 'Напоминание ПРЫГАТЬ В ПОДЗЕМ установлено на:' + result_text)
+       bot.send_message(chat_id, 'РќР°РїРѕРјРёРЅР°РЅРёРµ РџР Р«Р“РђРўР¬ Р’ РџРћР”Р—Р•Рњ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ РЅР°:' + result_text)
           
         
 def send_reminder(chat_id, reminder_name):
     
-    print("reminder Потоков до - " + str(threading.active_count()))
+    print("reminder РџРѕС‚РѕРєРѕРІ РґРѕ - " + str(threading.active_count()))
     
-    if reminder_name == 'Пилить':
-        mess = bot.send_message(chat_id, 'Время пилить лаха!')
+    if reminder_name == 'РџРёР»РёС‚СЊ':
+        mess = bot.send_message(chat_id, 'Р’СЂРµРјСЏ РїРёР»РёС‚СЊ Р»Р°С…Р°!')
         bot.pin_chat_message(chat_id, mess.message_id)
         bot.unpin_chat_message(chat_id, mess.message_id)
     else:
-        mess = bot.send_message(chat_id, 'ПРЫГАЙ В ПОДЗЕМЕЛЬЕ, ДЛАНЕВИЦ!')
+        mess = bot.send_message(chat_id, 'РџР Р«Р“РђР™ Р’ РџРћР”Р—Р•РњР•Р›Р¬Р•, Р”Р›РђРќР•Р’РР¦!')
         bot.pin_chat_message(chat_id, mess.message_id)
         bot.unpin_chat_message(chat_id, mess.message_id)
         
-    print("reminder Потоков - " + str(threading.active_count()))
+    print("reminder РџРѕС‚РѕРєРѕРІ - " + str(threading.active_count()))
 
     start_routine()
 
